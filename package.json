@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/casecode/jsxml/issues"
   },
-  "homepage": "https://github.com/casecode/jsxml#readme"
+  "homepage": "https://github.com/casecode/jsxml#readme",
+  "devDependencies": {
+    "babel": "^5.8.19",
+    "chai": "^3.2.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^0.15.0",
+    "gulp-mocha": "^2.1.3"
+  }
 }
