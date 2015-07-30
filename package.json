@@ -1,9 +1,11 @@
 {
   "name": "jsxr",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A JSX transform for rendering real DOM nodes.",
-  "main": "jsxr.js",
+  "main": "lib/jsxr.js",
   "scripts": {
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
     "test": "gulp test"
   },
   "repository": {

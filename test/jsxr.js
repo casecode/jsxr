@@ -1,6 +1,6 @@
 import jsdom from 'mocha-jsdom';
 import chai, { assert, expect } from 'chai';
-import jsxr from '../jsxr';
+import jsxr from '../src/jsxr';
 
 describe('jsxr', () => {
   // Load browser API

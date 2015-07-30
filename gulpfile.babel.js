@@ -4,7 +4,7 @@ import eslint from 'gulp-eslint';
 import mocha from 'gulp-mocha';
 
 gulp.task('lint', () => {
-  return gulp.src(['./jsxr.js', './test/**/*.js'])
+  return gulp.src(['.src/**/*.js', './test/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format());
 });
