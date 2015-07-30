@@ -37,4 +37,16 @@ describe('jsxr', () => {
     assert.equal(parseInt(firstItemIdx, 10), 0);
     assert.equal(lettersList.children.length, 3);
   });
+
+  it('should should inline styles', () => {
+    const rules = {
+      backgroundColor: '#fff',
+      marginBottom: '20px',
+    };
+
+    const Test = <div className='test' style={ rules }></div>;
+
+    assert.equal(Test.style.backgroundColor, '#fff');
+    assert.equal(Test.style.marginBottom, '20px');
+  });
 });
