@@ -15,13 +15,7 @@ function jsxr(tag, attributes, ...children) {
   // ensure children is a flattened array
   const childElements = [].concat(...children);
 
-  if (tag instanceof HTMLElement) return tag;
-
-  if (typeof tag !== 'string') {
-    throw new Error('jsxr tags must be regular HTML elements or components');
-  }
-
-  const element = document.createElement(tag);
+  const element = tag instanceof HTMLElement ? tag : document.createElement(tag);
 
   for (let name of Object.keys(attrs)) {
     if (typeof element[name] !== 'undefined') {

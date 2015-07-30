@@ -17,13 +17,16 @@ import jsxr from 'jsxr';
 // The jsxPragma can also be configured in Babel
 /** @jsx jsxr */
 
+// Note that custom components should be written in PascalCase.
+// Otherwise, the Babel JSX transpiler will pass the variable name
+// as a string instead of a reference to the component.
 const Letters = (
   <ul>
     {['A', 'B', 'C'].map(item => <li>{ item }</li>)}
   </ul>
 )
 
-const Wrapper = (
+const Container = (
   <div className='letters'><Letters /></div>
 );
 ```
@@ -74,8 +77,8 @@ import jsxr from 'jsxr';
 
 ## Acknowledgments
 
-This is an ES6 port of [callumlocke/plain-jsx](https://github.com/callumlocke/plain-jsx).
-It adds support for component elements and using DOM property names
+Inspired by [callumlocke/plain-jsx](https://github.com/callumlocke/plain-jsx).
+It adds support for custom component elements and using DOM property names
 (e.g. className instead of class), in order to add consistency for
 React developers.
 
