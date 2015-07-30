@@ -1,4 +1,4 @@
-# jsxr (JSX Real) v1.0.0
+# jsxr (JSX Real) v1.0.1
 
 > JSX transform for rendering real DOM nodes without React. Written in ES6.
 

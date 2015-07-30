@@ -1,6 +1,6 @@
 {
   "name": "jsxr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A JSX transform for rendering real DOM nodes.",
   "main": "jsxr.js",
   "scripts": {
