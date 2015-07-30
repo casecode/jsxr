@@ -1,14 +1,14 @@
 {
-  "name": "jsxml",
+  "name": "jsxr",
   "version": "1.0.0",
   "description": "A JSX transform for rendering real DOM nodes.",
-  "main": "jsxml.js",
+  "main": "jsxr.js",
   "scripts": {
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/casecode/jsxml.git"
+    "url": "git+https://github.com/casecode/jsxr.git"
   },
   "keywords": [
     "JSX",
@@ -18,9 +18,9 @@
   "author": "casey.r.white@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/casecode/jsxml/issues"
+    "url": "https://github.com/casecode/jsxr/issues"
   },
-  "homepage": "https://github.com/casecode/jsxml#readme",
+  "homepage": "https://github.com/casecode/jsxr#readme",
   "devDependencies": {
     "babel": "^5.8.19",
     "chai": "^3.2.0",

@@ -1,21 +1,21 @@
-# jsxml v1.0.0
+# jsxr (JSX Real) v1.0.0
 
 > JSX transform for rendering real DOM nodes without React.
 
 ## Installation
 
 ```bash
-npm install jsxml
+npm install jsxr
 ```
 
 ## Example Usage
 
 ### jsxPragma
 ```js
-import jsxml from 'jsxml';
+import jsxr from 'jsxr';
 
 // The jsxPragma can also be configured in Babel
-/** @jsx jsxml */
+/** @jsx jsxr */
 
 const Letters = (
   <ul>
@@ -36,7 +36,7 @@ import babelify from 'babelify';
 
 browserify('./script.js', { debug: true })
   .transform(babelify.configure({
-    jsxPragma: 'jsxml'
+    jsxPragma: 'jsxr'
   }))
   .bundle()
   .on('error', function (err) {
@@ -45,8 +45,8 @@ browserify('./script.js', { debug: true })
   .pipe(fs.createWriteStream('bundle.js'));
 
 // script.js
-// jsxml variable must be defined
-import jsxml from 'jsxml';
+// jsxr variable must be defined
+import jsxr from 'jsxr';
 ```
 
 ### Gulp + Babel + Mocha
@@ -61,15 +61,15 @@ gulp.task('test', function() {
     .pipe(mocha({
       compilers: {
         js: babel({
-          jsxPragma: 'jsxml'
+          jsxPragma: 'jsxr'
         })
       }
     }));
 });
 
 // test/**/*.js
-// jsxml variable must be defined
-import jsxml from 'jsxml';
+// jsxr variable must be defined
+import jsxr from 'jsxr';
 ```
 
 ## Acknowledgments

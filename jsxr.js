@@ -1,5 +1,5 @@
 /**
- * @desc jsxml() transforms JSX into an HTMLElement
+ * @desc jsxr() transforms JSX into an HTMLElement
  *
  * @param {(String)} tag - tag or component name
  * @param {Object} [attributes={}] - optional element attributes
@@ -7,7 +7,7 @@
  *
  * @return {HTMLElement} HTML component
  */
-function jsxml(tag, attributes, ...children) {
+function jsxr(tag, attributes, ...children) {
   // default params cannot handle null values
   const attrs = attributes || {};
 
@@ -18,7 +18,7 @@ function jsxml(tag, attributes, ...children) {
   if (tag instanceof HTMLElement) return tag;
 
   if (typeof tag !== 'string') {
-    throw new Error('jsxml tags must be regular HTML elements or components');
+    throw new Error('jsxr tags must be regular HTML elements or components');
   }
 
   const element = document.createElement(tag);
@@ -42,4 +42,4 @@ function jsxml(tag, attributes, ...children) {
   return element;
 }
 
-export default jsxml;
+export default jsxr;

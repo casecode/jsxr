@@ -4,7 +4,7 @@ import eslint from 'gulp-eslint';
 import mocha from 'gulp-mocha';
 
 gulp.task('lint', () => {
-  return gulp.src(['./jsxml.js', './test/**/*.js'])
+  return gulp.src(['./jsxr.js', './test/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format());
 });
@@ -14,7 +14,7 @@ gulp.task('test', function() {
     .pipe(mocha({
       compilers: {
         js: babel({
-          jsxPragma: 'jsxml'
+          jsxPragma: 'jsxr'
         })
       }
     }));
