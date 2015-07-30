@@ -1,0 +1,24 @@
+{
+  "name": "jsxml",
+  "version": "0.0.1",
+  "description": "A JSX transform for rendering real DOM nodes.",
+  "main": "jsxml.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casecode/jsxml.git"
+  },
+  "keywords": [
+    "JSX",
+    "HTML",
+    "DOM"
+  ],
+  "author": "casey.r.white@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/casecode/jsxml/issues"
+  },
+  "homepage": "https://github.com/casecode/jsxml#readme"
+}
