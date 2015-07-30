@@ -13,7 +13,9 @@ gulp.task('test', function() {
   return gulp.src(['test/**/*.js'])
     .pipe(mocha({
       compilers: {
-        js: babel
+        js: babel({
+          jsxPragma: 'jsxml'
+        })
       }
     }));
 });

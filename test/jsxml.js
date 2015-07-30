@@ -2,8 +2,6 @@ import jsdom from 'mocha-jsdom';
 import chai, { assert, expect } from 'chai';
 import jsxml from '../jsxml';
 
-/** @jsx jsxml */
-
 describe('jsxml', () => {
   // Load browser API
   jsdom();
