@@ -1,6 +1,6 @@
 # jsxr (JSX Real) v1.0.0
 
-> JSX transform for rendering real DOM nodes without React.
+> JSX transform for rendering real DOM nodes without React. Written in ES6.
 
 ## Installation
 
@@ -74,7 +74,7 @@ import jsxr from 'jsxr';
 
 ## Acknowledgments
 
-This is a port of [callumlocke/plain-jsx](https://github.com/callumlocke/plain-jsx).
+This is an ES6 port of [callumlocke/plain-jsx](https://github.com/callumlocke/plain-jsx).
 It adds support for component elements and using DOM property names
 (e.g. className instead of class), in order to add consistency for
 React developers.
