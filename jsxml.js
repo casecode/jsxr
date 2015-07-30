@@ -4,6 +4,8 @@
  * @param {(String)} tag - tag or component name
  * @param {Object} [attributes={}] - optional element attributes
  * @param {String[]} [children] - child elements can be tags or components
+ *
+ * @return {HTMLElement} HTML component
  */
 function jsxml(tag, attributes, ...children) {
   // default params cannot handle null values
