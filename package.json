@@ -1,6 +1,6 @@
 {
   "name": "jsxml",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A JSX transform for rendering real DOM nodes.",
   "main": "jsxml.js",
   "scripts": {
