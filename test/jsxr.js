@@ -46,7 +46,7 @@ describe('jsxr', () => {
 
     const Test = <div className='test' style={ rules }></div>;
 
-    assert.equal(Test.style.backgroundColor, '#fff');
+    assert.equal(Test.style.backgroundColor, 'rgb(255, 255, 255)');
     assert.equal(Test.style.marginBottom, '20px');
   });
 });
