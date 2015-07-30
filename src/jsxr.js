@@ -18,7 +18,13 @@ function jsxr(tag, attributes, ...children) {
   const element = tag instanceof HTMLElement ? tag : document.createElement(tag);
 
   for (let name of Object.keys(attrs)) {
-    if (typeof element[name] !== 'undefined') {
+    if (name === 'style') {
+      const rules = attrs[name];
+
+      for (let styleAttr of Object.keys(rules)) {
+        element.style[styleAttr] = rules[styleAttr];
+      }
+    } else if (typeof element[name] !== 'undefined') {
       element[name] = attrs[name];
     } else {
       element.setAttribute(name, attrs[name]);
