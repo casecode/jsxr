@@ -9,7 +9,7 @@ gulp.task('lint', () => {
     .pipe(eslint.format());
 });
 
-gulp.task('test', function() {
+gulp.task('test', () => {
   return gulp.src(['test/**/*.js'])
     .pipe(mocha({
       compilers: {
