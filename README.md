@@ -1,6 +1,9 @@
-# jsxr (JSX Real) v1.2.0
+# jsxr (JSX Real)
 
-> JSX transform for rendering real DOM nodes without React. Written in ES6.
+jsxr is a transform for rendering real DOM nodes without React.
+It supports custom components and inline styles. Custom component
+variables must be PascalCase to work correctly with the Babel JSX transpiler.
+Inline styles should be camelCase (marginTop instead of margin-top).
 
 ## Installation
 
@@ -24,10 +27,17 @@ const Letters = (
   <ul>
     {['A', 'B', 'C'].map(item => <li>{ item }</li>)}
   </ul>
-)
+);
+
+const styles = {
+  backgroundColor: '#fff',
+  padding: '0 5px',
+};
 
 const Container = (
-  <div className='letters'><Letters /></div>
+  <div className='letters' style={ styles }>
+    <Letters />
+  </div>
 );
 ```
 
@@ -78,9 +88,9 @@ import jsxr from 'jsxr';
 ## Acknowledgments
 
 Inspired by [callumlocke/plain-jsx](https://github.com/callumlocke/plain-jsx).
-It adds support for custom component elements and using DOM property names
-(e.g. className instead of class), in order to add consistency for
-React developers.
+It adds support for custom component elements, inline styles and
+using DOM property names (e.g. className instead of class),
+in order to add consistency for React developers.
 
 ## License
 
