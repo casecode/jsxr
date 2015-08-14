@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import babel from 'babel/register';
+import babel from 'babel-core/register';
 import eslint from 'gulp-eslint';
 import mocha from 'gulp-mocha';
 
