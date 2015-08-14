@@ -17,11 +17,16 @@ function jsxr(tag, attributes, ...children) {
 
   const element = tag instanceof HTMLElement ? tag : document.createElement(tag);
 
-  for (let name of Object.keys(attrs)) {
+  const keys = Object.keys(attrs);
+  for (let i = 0; i < keys.length; i++) {
+    const name = keys[i];
+
     if (name === 'style') {
       const rules = attrs[name];
+      const keys = Object.keys(rules);
 
-      for (let styleAttr of Object.keys(rules)) {
+      for (let i = 0; i < keys.length; i++) {
+        const styleAttr = keys[i];
         element.style[styleAttr] = rules[styleAttr];
       }
     } else if (typeof element[name] !== 'undefined') {
@@ -31,7 +36,9 @@ function jsxr(tag, attributes, ...children) {
     }
   }
 
-  for (let child of childElements) {
+  for (let i = 0; i < childElements.length; i++) {
+    const child = childElements[i];
+    
     element.appendChild(
       child instanceof HTMLElement ?
         child :
