@@ -15,7 +15,7 @@ function jsxr(tag, attributes, ...children) {
   // ensure children is a flattened array
   const childElements = [].concat(...children);
 
-  const element = tag instanceof HTMLElement ? tag : document.createElement(tag);
+  const element = tag instanceof HTMLElement ? tag.cloneNode(true) : document.createElement(tag);
 
   const keys = Object.keys(attrs);
   for (let i = 0; i < keys.length; i++) {
@@ -38,7 +38,7 @@ function jsxr(tag, attributes, ...children) {
 
   for (let i = 0; i < childElements.length; i++) {
     const child = childElements[i];
-    
+
     element.appendChild(
       child instanceof HTMLElement ?
         child :
